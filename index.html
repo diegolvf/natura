@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Programação Linear - Natura</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/Natura Logo branco.png" alt="Logo Natura">
+        <h1>Análise de Programação Linear - Produtos Natura</h1>
+        <p>Trabalho acadêmico sobre otimização da produção e maximização de lucros utilizando o Solver do Excel.</p>
+    </header>
+
+    <section id="produtos">
+        <h2>Produtos Analisados</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="img/Shampoo_ekos.jpg" alt="Shampoo Ekos">
+                <h3>Shampoo Ekos</h3>
+                <p>Produto sustentável com ingredientes naturais da Amazônia.</p>
+            </div>
+            <div class="card">
+                <img src="img/Kaia_Luna.jpg" alt="Perfume Kaiak/Luna">
+                <h3>Perfume Kaiak / Luna</h3>
+                <p>Fragrâncias icônicas que refletem frescor e elegância.</p>
+            </div>
+            <div class="card">
+                <img src="img/Sabonete vegetal.jpg" alt="Sabonete Vegetal">
+                <h3>Sabonete Vegetal</h3>
+                <p>Limpeza suave e perfumada com base vegetal.</p>
+            </div>
+            <div class="card">
+                <img src="img/Hidratante ekos.jpg" alt="Hidratante Corporal Ekos">
+                <h3>Hidratante Corporal Ekos</h3>
+                <p>Hidratação intensa com óleos naturais.</p>
+            </div>
+            <div class="card">
+                <img src="img/todia.jpg" alt="Desodorante Todia">
+                <h3>Desodorante Antitranspirante Todia</h3>
+                <p>Proteção prolongada e fragrância delicada.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="dados">
+        <h2>Dados Coletados - Situação Atual</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço de Venda (R$)</th>
+                        <th>Preço de Custo (R$)</th>
+                        <th>Lucro Unitário (R$)</th>
+                        <th>Tempo de Fabricação (min)</th>
+                        <th>Custo Matéria-Prima (R$)</th>
+                        <th>Quantidade Produzida</th>
+                        <th>Lucro Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- Produto -->
+                        <td>Shampoo Ekos</td>
+                        <!-- Preço de Venda (R$) -->
+                        <td>35,00</td>
+                        <!-- Preço de Custo (R$) -->
+                        <td>18,00</td>
+                        <!-- Lucro Unitário (R$) -->
+                        <td>17,00</td>
+                        <!-- Tempo de Fabricação (min) -->
+                        <td>8</td>
+                        <!-- Custo Matéria-Prima (R$) -->
+                        <td>10,00</td>
+                        <!-- Quantidade Produzida -->
+                        <td>13.333</td>
+                        <!-- Lucro Total -->
+                        <td>16.600,00</td>
+                    </tr>
+                    <tr>
+                        <!-- Produto -->
+                        <td>Perfume Kaiak/Luna</td>
+                        <!-- Preço de Venda (R$) -->
+                        <td>95,00</td>
+                        <!-- Preço de Custo (R$) -->
+                        <td>50,00</td>
+                        <!-- Lucro Unitário (R$) -->
+                        <td>45,00</td>
+                        <!-- Tempo de Fabricação (min) -->
+                        <td>12</td>
+                        <!-- Custo Matéria-Prima (R$) -->
+                        <td>25,00</td>
+                        <!-- Quantidade Produzida -->
+                        <td>8.000</td>
+                        <!-- Lucro Total -->
+                        <td>21.000,00</td>
+                    </tr>
+                    <tr>
+                        <!-- Produto -->
+                        <td>Sabonete Vegetal</td>
+                        <!-- Preço de Venda (R$) -->
+                        <td>7,00</td>
+                        <!-- Preço de Custo (R$) -->
+                        <td>3,50</td>
+                        <!-- Lucro Unitário (R$) -->
+                        <td>3,50</td>
+                        <!-- Tempo de Fabricação (min) -->
+                        <td>2</td>
+                        <!-- Custo Matéria-Prima (R$) -->
+                        <td>2,00</td>
+                        <!-- Quantidade Produzida -->
+                        <td>40.000</td>
+                        <!-- Lucro Total -->
+                        <td>4.050,00</td>
+                    </tr>
+                    <tr>
+                        <!-- Produto -->
+                        <td>Hidratante Corporal Ekos</td>
+                        <!-- Preço de Venda (R$) -->
+                        <td>45,00</td>
+                        <!-- Preço de Custo (R$) -->
+                        <td>20,00</td>
+                        <!-- Lucro Unitário (R$) -->
+                        <td>25,00</td>
+                        <!-- Tempo de Fabricação (min) -->
+                        <td>10</td>
+                        <!-- Custo Matéria-Prima (R$) -->
+                        <td>15,00</td>
+                        <!-- Quantidade Produzida -->
+                        <td>5.000</td>
+                        <!-- Lucro Total -->
+                        <td>20.520,00</td>
+                    </tr>
+                    <tr>
+                        <!-- Produto -->
+                        <td>Desodorante Todia</td>
+                        <!-- Preço de Venda (R$) -->
+                        <td>25,00</td>
+                        <!-- Preço de Custo (R$) -->
+                        <td>12,00</td>
+                        <!-- Lucro Unitário (R$) -->
+                        <td>13,00</td>
+                        <!-- Tempo de Fabricação (min) -->
+                        <td>5</td>
+                        <!-- Custo Matéria-Prima (R$) -->
+                        <td>8,00</td>
+                        <!-- Quantidade Produzida -->
+                        <td>10.000</td>
+                        <!-- Lucro Total -->
+                        <td>5.040,00</td>
+                        <!-- Total -->
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="total" colspan="1">TOTAL</td>
+                        <td class="total-value" colspan="7">67.210,00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+
+    <section id="solver">
+        <h2>Modelagem no Solver</h2>
+        <p>Utilizamos o <strong>Solver do Excel</strong> para resolver o problema de programação linear, considerando as
+            restrições de tempo e matéria-prima, com o objetivo de <strong>maximizar o lucro total</strong>.</p>
+        <p>O modelo definiu as variáveis de decisão como o número de unidades produzidas de cada produto, respeitando as
+            restrições de produção.</p>
+            <img src="/img/Tabela-solver.png" alt="Modelo Solver">
+        <img src="/img/solver.png" alt="Modelo Solver">
+
+        <h2>Relatório de Sensibilidade</h2>
+        <h3>Células Variáveis</h3>
+           <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Célula</th>
+                        <th>Nome do Produto</th>
+                        <th>Valor Final</th>
+                        <th>Custo Reduzido</th>
+                        <th>Coeficiente Objetivo</th>
+                        <th>Permitido Aumentar</th>
+                        <th>Permitido Reduzir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- Célula -->
+                        <td>$G$10</td>
+                        <!-- Nome -->
+                        <td>Shampoo Ekos Qtd. Otimizada</td>
+                        <!-- Valor Final -->
+                        <td>0</td>
+                        <!-- Custo Reduzido -->
+                        <td>-0,043374118</td>
+                        <!-- Coeficiente Objetivo -->
+                        <td>17,1608642</td>
+                        <!-- Permitido Aumentar -->
+                        <td>0,043374118</td>
+                        <!-- Permitido Reduzir -->
+                        <td>1E+30</td>
+                    </tr>
+                    <tr>
+                        <!-- Célula -->
+                        <td>$G$11</td>
+                        <!-- Nome -->
+                        <td>Perfume Kaia/Luna Qtd. Otimizada</td>
+                        <!-- Valor Final -->
+                        <td>1572,767857</td>
+                        <!-- Custo Reduzido -->
+                        <td>0</td>
+                        <!-- Coeficiente Objetivo -->
+                        <td>70</td>
+                        <!-- Permitido Aumentar -->
+                        <td>3,229113924</td>
+                        <!-- Permitido Reduzir -->
+                        <td>0,549951083</td>
+                    </tr>
+                    <tr>
+                        <!-- Célula -->
+                        <td>$G$12</td>
+                        <!-- Nome -->
+                        <td>Sabonete Vegetal Qtd. Otimmizada</td>
+                        <!-- Valor Final -->
+                        <td>4718,303571</td>
+                        <!-- Custo Reduzido -->
+                        <td>0</td>
+                        <!-- Coeficiente Objetivo -->
+                        <td>8,1</td>
+                        <!-- Permitido Aumentar -->
+                        <td>1,076371308</td>
+                        <!-- Permitido Reduzir -->
+                        <td>0,1833117028</td>
+                    </tr>
+                    <tr>
+                        <!-- Célula -->
+                        <td>$G$13</td>
+                        <!-- Nome -->
+                        <td>Hidra. Corporal Ekos Qtd. Otimizada</td>
+                        <!-- Valor Final -->
+                        <td>2,976190476</td>
+                        <!-- Custo Reduzido -->
+                        <td>0</td>
+                        <!-- Coeficiente Objetivo -->
+                        <td>21,93722222</td>
+                        <!-- Permitido Aumentar (R$) -->
+                        <td>27,92055556</td>
+                        <!-- Permitido Reduzir -->
+                        <td>0,190091787</td>
+                    </tr>
+                    <tr>
+                        <!-- Célula -->
+                        <td>$G$14</td>
+                        <!-- Nome -->
+                        <td>Desod. Antitransp. Todia Qtd. Otimizada</td>
+                        <!-- Valor Final -->
+                        <td>5,952380952</td>
+                        <!-- Custo Reduzido -->
+                        <td>0</td>
+                        <!-- Coeficiente Objetivo -->
+                        <td>10,43361111</td>
+                        <!-- Permitido Aumentar -->
+                        <td>13,96027778</td>
+                        <!-- Permitido Reduzir -->
+                        <td>0,095045894</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Restrições</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Célula</th>
+                        <th>Nome do Produto</th>
+                        <th>Valor Final</th>
+                        <th>Preço Sombra</th>
+                        <th>Restrição Lateral R.H</th>
+                        <th>Permitido Aumentar</th>
+                        <th>Permitido Reduzir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- Célula -->
+                        <td>$G$12</td>
+                        <!-- Nome -->
+                        <td>Sabonete Vegetal Qtd. Ótimo</td>
+                        <!-- Valor Final -->
+                        <td>4718,303571</td>
+                        <!-- Preço Sombra -->
+                        <td>-0,794549162</td>
+                        <!-- Restrição Lateral -->
+                        <td>0</td>
+                        <!-- Permitido Aumentar -->
+                        <td>5,660377358</td>
+                        <!-- Permitido Reduzir -->
+                        <td>32,92523364</td>
+                    </tr>
+                    <tr>
+                        <!-- Célula -->
+                        <td>$G$13</td>
+                        <!-- Nome -->
+                        <td>Hidratante Corporal Ekos Qtd. Otimizada</td>
+                        <!-- Valor Final -->
+                        <td>2,976190476</td>
+                        <!-- Preço Sombra -->
+                        <td>1,187516534</td>
+                        <!-- Restrição Lateral -->
+                        <td>0</td>
+                        <!-- Permitido Aumentar -->
+                        <td>29,41176471</td>
+                        <!-- Permitido Reduzir -->
+                        <td>3,311258278</td>
+                    </tr>
+                    <tr>
+                        <!-- Célula -->
+                        <td>$G$15</td>
+                        <!-- Nome -->
+                        <td>Total Qtd. Otimizada</td>
+                        <!-- Valor Final -->
+                        <td>6300</td>
+                        <!-- Preço Sombra -->
+                        <td>1,138839286</td>
+                        <!-- Restrição Lateral -->
+                        <td>6300</td>
+                        <!-- Permitido Aumentar -->
+                        <td>4459,493671</td>
+                        <!-- Permitido Reduzir -->
+                        <td>3,703703704</td>
+                    </tr>
+                    <tr>
+                        <!-- Célula -->
+                        <td>$G$19</td>
+                        <!-- Nome -->
+                        <td>Tempo Total de Produção Otimizado</td>
+                        <!-- Valor Final -->
+                        <td>125,9702381</td>
+                        <!-- Preço Sombra -->
+                        <td>0</td>
+                        <!-- Restrição Lateral -->
+                        <td>536,25</td>
+                        <!-- Permitido Aumentar (R$) -->
+                        <td>1E+30</td>
+                        <!-- Permitido Reduzir -->
+                        <td>410,2797619</td>
+                    </tr>
+                    <tr>
+                        <!-- Célula -->
+                        <td>$I$15</td>
+                        <!-- Nome -->
+                        <td>Total Matéria Prima Gasta Otimizado</td>
+                        <!-- Valor Final -->
+                        <td>R$ 51.000,00</td>
+                        <!-- Preço Sombra -->
+                        <td>2,769896384</td>
+                        <!-- Restrição Lateral -->
+                        <td>51000</td>
+                        <!-- Permitido Aumentar -->
+                        <td>30</td>
+                        <!-- Permitido Reduzir -->
+                        <td>21138</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="lucro-z" colspan="1">Lucro Total Z:</td>
+                        <td class="valor-z" colspan="0">R$ 148.439,40</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+    <section id="dados">
+        <h2>Situação - Após Otimização com Solver</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço de Venda (R$)</th>
+                        <th>Preço de Custo (R$)</th>
+                        <th>Lucro Unitário (R$)</th>
+                        <th>Tempo de Fabricação (min)</th>
+                        <th>Custo Matéria-Prima (R$)</th>
+                        <th>Quantidade Produzida</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- Produto -->
+                        <td>Shampoo Ekos</td>
+                        <!-- Preço de Venda (R$) -->
+                        <td>35,00</td>
+                        <!-- Preço de Custo (R$) -->
+                        <td>18,00</td>
+                        <!-- Lucro Unitário (R$) -->
+                        <td>17,00</td>
+                        <!-- Tempo de Fabricação (min) -->
+                        <td>8</td>
+                        <!-- Custo Matéria-Prima (R$) -->
+                        <td>10,00</td>
+                        <!-- Quantidade Produzida -->
+                        <td>13.333</td>
+                    </tr>
+                    <tr>
+                        <!-- Produto -->
+                        <td>Perfume Kaiak/Luna</td>
+                        <!-- Preço de Venda (R$) -->
+                        <td>95,00</td>
+                        <!-- Preço de Custo (R$) -->
+                        <td>50,00</td>
+                        <!-- Lucro Unitário (R$) -->
+                        <td>45,00</td>
+                        <!-- Tempo de Fabricação (min) -->
+                        <td>12</td>
+                        <!-- Custo Matéria-Prima (R$) -->
+                        <td>25,00</td>
+                        <!-- Quantidade Produzida -->
+                        <td>8.000</td>
+                    </tr>
+                    <tr>
+                        <!-- Produto -->
+                        <td>Sabonete Vegetal</td>
+                        <!-- Preço de Venda (R$) -->
+                        <td>7,00</td>
+                        <!-- Preço de Custo (R$) -->
+                        <td>3,50</td>
+                        <!-- Lucro Unitário (R$) -->
+                        <td>3,50</td>
+                        <!-- Tempo de Fabricação (min) -->
+                        <td>2</td>
+                        <!-- Custo Matéria-Prima (R$) -->
+                        <td>2,00</td>
+                        <!-- Quantidade Produzida -->
+                        <td>40.000</td>
+                    </tr>
+                    <tr>
+                        <!-- Produto -->
+                        <td>Hidratante Corporal Ekos</td>
+                        <!-- Preço de Venda (R$) -->
+                        <td>45,00</td>
+                        <!-- Preço de Custo (R$) -->
+                        <td>20,00</td>
+                        <!-- Lucro Unitário (R$) -->
+                        <td>25,00</td>
+                        <!-- Tempo de Fabricação (min) -->
+                        <td>10</td>
+                        <!-- Custo Matéria-Prima (R$) -->
+                        <td>15,00</td>
+                        <!-- Quantidade Produzida -->
+                        <td>5.000</td>
+                    </tr>
+                    <tr>
+                        <!-- Produto -->
+                        <td>Desodorante Todia</td>
+                        <!-- Preço de Venda (R$) -->
+                        <td>25,00</td>
+                        <!-- Preço de Custo (R$) -->
+                        <td>12,00</td>
+                        <!-- Lucro Unitário (R$) -->
+                        <td>13,00</td>
+                        <!-- Tempo de Fabricação (min) -->
+                        <td>5</td>
+                        <!-- Custo Matéria-Prima (R$) -->
+                        <td>8,00</td>
+                        <!-- Quantidade Produzida -->
+                        <td>10.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="resultados">
+        <h2>Resultados e Conclusões</h2>
+        <p>Os resultados obtidos mostram que a combinação ótima de produção maximiza o lucro total respeitando as
+            restrições de recursos disponíveis. Essa análise permite decisões mais estratégicas e sustentáveis na
+            produção.</p>
+    </section>
+
+    <footer>
+        <p>Trabalho desenvolvido por: <strong>Laura Marques, Diego Leão e João Lucas</strong></p>
+        <p>Disciplina: Programação Linear | Curso: Análise e Desenvolvimento de Sistemas</p>
+    </footer>
+
+    <script src="js/fade-in.js"></script>
+</body>
+
+</html>
