@@ -45,6 +45,17 @@
                 <p>Proteção prolongada e fragrância delicada.</p>
             </div>
         </div>
+        <div class="introducao">
+            <h3>Introdução</h3>
+            <p class="introducao-text">A indústria de cosméticos é um dos setores mais dinâmicos do mercado brasileiro, caracterizado por intensa
+                competitividade, diversidade de produtos e constantes variações de demanda. Diante desse cenário, empresas
+                do segmento precisam adotar ferramentas quantitativas que auxiliem na tomada de decisões estratégicas,
+                garantindo equilíbrio entre custos, capacidade produtiva e atendimento ao consumidor.
+                O presente trabalho tem como foco o desenvolvimento de um modelo de Programação Linear para otimizar a
+                produção de cinco produtos cosméticos distintos da empresa Natura, considerando restrições reais como
+                disponibilidade de matéria-prima, tempo de produção e capacidade fabril
+            </p>
+        </div>
     </section>
 
     <section id="dados">
@@ -168,12 +179,17 @@
 
     <section id="solver">
         <h2>Modelagem no Solver</h2>
-        <p>Utilizamos o <strong>Solver do Excel</strong> para resolver o problema de programação linear, considerando as
-            restrições de tempo e matéria-prima, com o objetivo de <strong>maximizar o lucro total</strong>.</p>
-        <p>O modelo definiu as variáveis de decisão como o número de unidades produzidas de cada produto, respeitando as
-            restrições de produção.</p>
+        <div class=" solver-text">
+            <p>Utilizamos o <strong>Solver do Excel</strong> para resolver o problema de programação linear, considerando as
+                restrições de tempo e matéria-prima, com o objetivo de <strong>maximizar o lucro total</strong>.
+                O modelo definiu as variáveis de decisão como o número de unidades produzidas de cada produto, respeitando as
+                restrições de produção.
+            </p>
+        </div>
         <img src="/img/Tabela-solver.png" alt="Modelo Solver">
         <img src="/img/solver.png" alt="Modelo Solver">
+        <img src="/img/Análise de Sensibilidade.png" alt="Modelo Solver">
+
 
         <h2>Relatório de Sensibilidade</h2>
         <h3>Relatório de Células Variáveis de Sensibilidade</h3>
@@ -495,7 +511,7 @@
         </div>
     </section>
 
-     <section>
+    <section>
         <h2>Restrições</h2>
         <div class="table-container">
             <table>
@@ -533,12 +549,23 @@
 
     <section id="resultados">
         <h2>Resultados e Conclusões</h2>
-        <p>Os resultados obtidos mostram que a combinação ótima de produção maximiza o lucro total respeitando as
-            restrições de recursos disponíveis. Essa análise permite decisões mais estratégicas e sustentáveis na
-            produção.</p>
+        <p>O produto Perfume Kaiak/Luna aparece como o de maior volume na solução 1.573 unidades, gerando lucro de R$
+            110.093,75, o que representa grande parte do lucro total.</p>
+        <p>Sabonete Vegetal aparece com produção de 4.718 unidades e lucro de R$ 38.218,26, evidenciando que embora sua
+            margem unitária seja baixa, seu consumo de tempo/matéria-prima é pequeno, o que permite volume maior.</p>
+        <p>Hidratante e Desodorante têm quantidades muito pequenas na solução (< 6 unidades!) e lucro correspondente
+                muito pequeno, o que sugere que, sob os parâmetros do modelo, eles não são economicamente interessantes
+                ou possuem consumo de recurso muito desfavorável.</p>
+                <p>O fato de o tempo total de produção utilizado 125,97 horas ser bem inferior ao limite 536,25 horas
+                    sugere que o limite aplicável não é totalmente utilizável ou que há outra restrição que está
+                    “reduzindo” a produção — provavelmente a restrição de unidades totais ou de matéria-prima gasta.</p>
+                <p>Em termos práticos, o resultado sugere que a empresa deve priorizar a produção de Perfume Kaiak/Luna
+                    e Sabonete Vegetal, e rever a continuidade ou escala de Hidratante e Desodorante – ou ajustar seus
+                    custos/tempos para torná-los competitivos.</p>
     </section>
 
     <footer>
+        <img src="img/Natura Logo branco.png" alt="Natura Logo">
         <p>Trabalho desenvolvido por: <strong>Laura Marques, Diego Leão e João Lucas</strong></p>
         <p>Disciplina: Programação Linear | Curso: Análise e Desenvolvimento de Sistemas</p>
     </footer>
