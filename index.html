@@ -172,12 +172,12 @@
             restrições de tempo e matéria-prima, com o objetivo de <strong>maximizar o lucro total</strong>.</p>
         <p>O modelo definiu as variáveis de decisão como o número de unidades produzidas de cada produto, respeitando as
             restrições de produção.</p>
-            <img src="/img/Tabela-solver.png" alt="Modelo Solver">
+        <img src="/img/Tabela-solver.png" alt="Modelo Solver">
         <img src="/img/solver.png" alt="Modelo Solver">
 
         <h2>Relatório de Sensibilidade</h2>
-        <h3>Células Variáveis</h3>
-           <div class="table-container">
+        <h3>Relatório de Células Variáveis de Sensibilidade</h3>
+        <div class="table-container">
             <table>
                 <thead>
                     <tr>
@@ -275,7 +275,7 @@
             </table>
         </div>
 
-        <h3>Restrições</h3>
+        <h3>Relatório de Restrições de Sensibilidade</h3>
         <div class="table-container">
             <table>
                 <thead>
@@ -387,94 +387,108 @@
                 <thead>
                     <tr>
                         <th>Produto</th>
-                        <th>Preço de Venda (R$)</th>
-                        <th>Preço de Custo (R$)</th>
-                        <th>Lucro Unitário (R$)</th>
-                        <th>Tempo de Fabricação (min)</th>
-                        <th>Custo Matéria-Prima (R$)</th>
-                        <th>Quantidade Produzida</th>
+                        <th>Qtd. Otimizada</th>
+                        <th>Tempo de Produção (hs)</th>
+                        <th>Matéria Prima Gasta</th>
+                        <th>Lucro Individual Otimizado</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <!-- Produto -->
                         <td>Shampoo Ekos</td>
-                        <!-- Preço de Venda (R$) -->
-                        <td>35,00</td>
-                        <!-- Preço de Custo (R$) -->
-                        <td>18,00</td>
-                        <!-- Lucro Unitário (R$) -->
-                        <td>17,00</td>
-                        <!-- Tempo de Fabricação (min) -->
-                        <td>8</td>
-                        <!-- Custo Matéria-Prima (R$) -->
-                        <td>10,00</td>
-                        <!-- Quantidade Produzida -->
-                        <td>13.333</td>
+                        <!-- Qtd. Otimizada -->
+                        <td>0</td>
+                        <!-- Tempo de Produção -->
+                        <td>0</td>
+                        <!-- Matéria Prima Gasta -->
+                        <td>R$ 0,00</td>
+                        <!-- Lucro Individual Otimizado -->
+                        <td>R$ 0,00</td>
                     </tr>
                     <tr>
                         <!-- Produto -->
                         <td>Perfume Kaiak/Luna</td>
-                        <!-- Preço de Venda (R$) -->
-                        <td>95,00</td>
-                        <!-- Preço de Custo (R$) -->
-                        <td>50,00</td>
-                        <!-- Lucro Unitário (R$) -->
-                        <td>45,00</td>
-                        <!-- Tempo de Fabricação (min) -->
-                        <td>12</td>
-                        <!-- Custo Matéria-Prima (R$) -->
-                        <td>25,00</td>
-                        <!-- Quantidade Produzida -->
-                        <td>8.000</td>
+                        <!-- Qtd. Otimizada -->
+                        <td>1572,767857</td>
+                        <!-- Tempo de Produção -->
+                        <td>78,63839286</td>
+                        <!-- Matéria Prima Gasta -->
+                        <td>R$ 37.746,43</td>
+                        <!-- Lucro Individual Otimizado -->
+                        <td>R$ 110.093,75</td>
                     </tr>
                     <tr>
                         <!-- Produto -->
                         <td>Sabonete Vegetal</td>
-                        <!-- Preço de Venda (R$) -->
-                        <td>7,00</td>
-                        <!-- Preço de Custo (R$) -->
-                        <td>3,50</td>
-                        <!-- Lucro Unitário (R$) -->
-                        <td>3,50</td>
-                        <!-- Tempo de Fabricação (min) -->
-                        <td>2</td>
-                        <!-- Custo Matéria-Prima (R$) -->
-                        <td>2,00</td>
-                        <!-- Quantidade Produzida -->
-                        <td>40.000</td>
+                        <!-- Qtd. Otimizada -->
+                        <td>4718,303571</td>
+                        <!-- Tempo de Produção -->
+                        <td>47,18303571</td>
+                        <!-- Matéria Prima Gasta -->
+                        <td>R$ 13.211,25</td>
+                        <!-- Lucro Individual Otimizado -->
+                        <td>R$ 38.218,26</td>
                     </tr>
                     <tr>
                         <!-- Produto -->
                         <td>Hidratante Corporal Ekos</td>
-                        <!-- Preço de Venda (R$) -->
-                        <td>45,00</td>
-                        <!-- Preço de Custo (R$) -->
-                        <td>20,00</td>
-                        <!-- Lucro Unitário (R$) -->
-                        <td>25,00</td>
-                        <!-- Tempo de Fabricação (min) -->
-                        <td>10</td>
-                        <!-- Custo Matéria-Prima (R$) -->
-                        <td>15,00</td>
-                        <!-- Quantidade Produzida -->
-                        <td>5.000</td>
+                        <!-- Qtd. Otimizada -->
+                        <td>2,976190476</td>
+                        <!-- Tempo de Produção -->
+                        <td>0,05952381</td>
+                        <!-- Matéria Prima Gasta -->
+                        <td>R$ 21,07</td>
+                        <!-- Lucro Individual Otimizado -->
+                        <td>R$ 65,29</td>
                     </tr>
                     <tr>
                         <!-- Produto -->
                         <td>Desodorante Todia</td>
-                        <!-- Preço de Venda (R$) -->
-                        <td>25,00</td>
-                        <!-- Preço de Custo (R$) -->
-                        <td>12,00</td>
-                        <!-- Lucro Unitário (R$) -->
-                        <td>13,00</td>
-                        <!-- Tempo de Fabricação (min) -->
-                        <td>5</td>
-                        <!-- Custo Matéria-Prima (R$) -->
-                        <td>8,00</td>
-                        <!-- Quantidade Produzida -->
-                        <td>10.000</td>
+                        <!-- Qtd. Otimizada (R$) -->
+                        <td>5,952380952</td>
+                        <!-- Tempo de Produção -->
+                        <td>0,089285714</td>
+                        <!-- Matéria Prima Gasta -->
+                        <td>R$ 21,25</td>
+                        <!-- Lucro Individual Otimizado -->
+                        <td>R$ 62,10</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="total-otimizado">TOTAL:</td>
+                        <td class="valor-otimizado">6300</td>
+                        <td class="valor-otimizado">125,9702381</td>
+                        <td class="valor-otimizado">R$ 51.000,00</td>
+                        <td class="valor-otimizado">R$ 148.439,40</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+    <section>
+        <h2>Variáveis</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="variaveis-solver">Descrição</th>
+                        <th class="variaveis-solver">Valores</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="variaveis-values">Lucro Total (Z)</td>
+                        <td class="variaveis-values">R$ 148.439,40</td>
+                    </tr>
+                    <tr>
+                        <td class="variaveis-values">Total Custo de Matéria Prima Utilizada</td>
+                        <td class="variaveis-values">R$ 51.000,00</td>
+                    </tr>
+                    <tr>
+                        <td class="variaveis-values">Tempo Total de Produção</td>
+                        <td class="variaveis-values">125,9702381</td>
                     </tr>
                 </tbody>
             </table>

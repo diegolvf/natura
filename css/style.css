@@ -108,6 +108,9 @@ tfoot .total {
 
 tfoot .total-value {
     text-align: right;
+    color: #F8C700;
+    font-weight: 550;
+    
 }
 
 tfoot .lucro-z {
@@ -115,7 +118,27 @@ tfoot .lucro-z {
     color: #4e4e4e;
 }
 
-tfoot .value-value {
+tfoot .valor-z {
+    color: #F8C700;
+    font-weight: 550;
+}
+
+tfoot .total-otimizado {
+    font-weight: 700;
+    color: #4e4e4e;
+}
+
+tfoot .valor-otimizado {
+    text-align: center;
+    color: #F8C700;
+    font-weight: 550;
+}
+
+.variaveis-solver {
+    text-align: left;
+}
+
+.variaveis-values {
     text-align: left;
 }
 
