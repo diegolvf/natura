@@ -142,6 +142,14 @@ tfoot .valor-otimizado {
     text-align: left;
 }
 
+.restricoes-solver {
+    text-align: left;
+}
+
+.restricoes-values {
+    text-align: left;
+}
+
 #solver img {
     display: block;
     max-width: 700px;
